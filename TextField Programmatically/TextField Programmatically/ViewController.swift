@@ -71,18 +71,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    // Second exec func when did end editing
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        
-        print("\nDID BEGIN")
-        
-        // Change color background view
-        view.backgroundColor = UIColor.red
-        
-        // Change color background textfield
-        kesleyTxtField.backgroundColor = UIColor.lightText
-    }
-    
     // First exec func when about to end editing
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
     
@@ -95,6 +83,18 @@ class ViewController: UIViewController, UITextFieldDelegate {
         kesleyTxtField.backgroundColor = UIColor.blue
         
         return true
+    }
+    
+    // Second exec func when did start editing
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        
+        print("\nDID BEGIN")
+        
+        // Change color background view
+        view.backgroundColor = UIColor.red
+        
+        // Change color background textfield
+        kesleyTxtField.backgroundColor = UIColor.lightText
     }
     
     // Seconly exec func when editing is done

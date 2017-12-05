@@ -88,13 +88,19 @@ class ViewController: UIViewController, UITextFieldDelegate {
     // Second exec func when did start editing
     func textFieldDidBeginEditing(_ textField: UITextField) {
         
-        print("\nDID BEGIN")
+        if kesleyTxtField.isEditing {
         
-        // Change color background view
-        view.backgroundColor = UIColor.red
-        
-        // Change color background textfield
-        kesleyTxtField.backgroundColor = UIColor.lightText
+            print("\nDID BEGIN")
+            
+            view.frame.origin.y -= 20
+            // Change color background view
+            view.backgroundColor = UIColor.yellow
+            
+            // Change color background textfield
+            kesleyTxtField.backgroundColor = UIColor.lightText
+        } else {
+            view.frame.origin.y += 20
+        }
     }
     
     // Seconly exec func when editing is done
